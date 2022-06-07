@@ -22,7 +22,8 @@
   <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/aos.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/main.css?ver=1.2.0" rel="stylesheet">
-  <link href="./css/title.css" rel="stylesheet">
+  <link href="./css/css/title.css" rel="stylesheet">
+  <link href="./css/css/contact.css" rel="stylesheet">
   <noscript>
     <style type="text/css">
       [data-aos] {
@@ -101,10 +102,7 @@
           <div class="row">
             <div class="col-md-6">
               <h2 class="h4 my-2">Chào! Tôi là Nguyễn Đình Thắng</h2>
-              <p>I am passionate about UI/UX design and Web Design. I am a skilled front-end developer and master of
-                graphic design tools such as Photoshop and Sketch. I am a quick learner and a team worker that gets the
-                job done. I can easily capitalize on low hanging fruits and quickly maximize timely deliverables for
-                real-time schemas.</p>
+              <p>Tôi đam mê công nghệ thông tin và Thiết kế web. Hiện tại, tôi đang theo học và là sinh viên tại Đại học Thủy Lợi khoa công nghệ thông tin. Tôi là một người học hỏi nhanh và là một người làm việc nhóm hoàn hảo, có thể hoàn thành công việc được giao đúng thời hạn. Tôi có thể dễ dàng tận dụng những gì bản thân có và nhanh chóng tối đa hóa việc và phân phối kịp thời bằng các lược đồ thời gian thực.</p>
               <div class="row mt-3">
                 <div class="col-sm-2">
                   <div class="pb-1">Tuổi:</div>
@@ -363,10 +361,10 @@
           <div class="cc-contact">
             <div class="row">
 
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <div class="card mb-0" data-aos="zoom-in">
                   <div class="row">
-                    <div class="col-md-6">
+                    <!-- <div class="col-md-6">
                       <div class="card-body">
                         <form action="https://formspree.io/your@email.com" class="" method="POST">
                           <div class="p pb-3"><strong>Tôi luôn đáp lại tin nhắn của bạn </strong></div>
@@ -409,8 +407,30 @@
                           </div>
                         </form>
                       </div>
+                    </div> -->
+                    <div class="col-md-6" id="overlay">
+                      <form onsubmit="event.preventDefault(); validateForm()">
+                    
+                        <label for="name">Tên:</label>
+                        <input type="text" id="name" placeholder="Tên của bạn">
+                        <small class="error"></small>
+                    
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" placeholder="Email của bạn">
+                        <small class="error"></small>
+                    
+                        <label for="message">Tin nhắn:</label>
+                        <textarea id="message" placeholder="Tin nhắn của bạn" rows="6"></textarea>
+                        <small class="error"></small>
+                    
+                        <div class="center">
+                          <input type="submit" value="Gửi">
+                          <p id="success" class="pt-3"></p>
+                        </div>
+                    
+                      </form>
                     </div>
-                    <div class="col-md-6">
+                    <!-- <div class="col-md-6">
                       <div class="card-body">
                         <p class="mb-0"><strong>Địa chỉ</strong></p>
                         <p class="pb-2">175, Tây Sơn, Đống Đa, Hà Nội</p>
@@ -419,12 +439,12 @@
                         <p class="mb-0"><strong>Email</strong></p>
                         <p>2051063737@e.tlu.edu.vn</p>
                       </div>
-
-                    </div>
+                    
+                    </div> -->
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 px-3" data-aos="fade-zoom-in" data-aos-delay="50" data-aos-easing="ease-in-back">
+              <div class="col-md-6 px-3" data-aos="fade-zoom-in" data-aos-delay="50" data-aos-easing="ease-in-back">
                 <div class="h5 pt-3">Nói với tôi cách tôi có thể giúp bạn!</div>
                 <p>Nếu bạn thích công việc của tôi và muốn tận dụng các dịch vụ của tôi thì hãy gửi tin nhắn cho tôi
                   bằng cách sử dụng biểu mẫu liên hệ.</p>
@@ -475,6 +495,7 @@
   <script src="./scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
   <script src="./scripts/aos.min.js?ver=1.2.0"></script>
   <script src="./scripts/main.js?ver=1.2.0"></script>
+  <script src="./scripts/scripts/contact.js"></script>
 </body>
 
 </html>
