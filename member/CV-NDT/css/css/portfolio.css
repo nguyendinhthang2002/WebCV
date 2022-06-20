@@ -1,0 +1,116 @@
+ul.products {
+    /* thiết lập kiểu cho 1 danh sách */
+    /* bỏ mấy cái dấu chấm mỗi li */
+    list-style: none;
+    /* giúp các thành phần linh hoạt */
+    /* các sản phẩm trên 1 hàng */
+    display: flex;
+    /* flex wrap  cho phép các item tự động xuống hàng
+            hoặc vẫn luôn nằm trên cùng một hàng khi kích thước
+            container thay đổi
+            flex-wrap: wrap khi kích thước container thay đổi
+            và tổng chiều rộng các items cộng lại lớn hơn chiều
+            rộng của container bọc ngoài thì nó sẽ rớt xuống */
+    /* flex wrap xuống hàng */
+    flex-wrap: wrap;
+    /* dàn ra */
+    justify-content: space-between;
+}
+
+ul.products li {
+    /* thuộc tính xác định độ rộng của flex item */
+    flex-basis: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* box-sizing: border-box Chiều rộng (chiều cao) được 
+            thiết lập từ thuộc tính width (height) chính là chiều 
+            rộng (chiều cao) của nguyên cả phần tử */
+    /* để kích thước của nó tính từ ngoài vào càng padding càng thu lại */
+    box-sizing: border-box;
+    /* Canh lề bên dưới cho thành phần */
+    /* khoảng cách giữa 2 hàng */
+    margin-bottom: 30px;
+}
+
+ul.products li img {
+    /* được sử dụng để thiết lập chiều rộng lớn nhất cho một phần tử */
+    max-width: 100%;
+    height: 300px;
+}
+
+ul.products li .product-top {
+    /* để cái position: absolute nó hoạt động */
+    position: relative;
+    /* ẩn mua ngay */
+    overflow: hidden;
+}
+
+/* bao phủ */
+ul.products li .product-top .product-thumb {
+    /* có tác dụng xác định thành phần hiển thị theo các hàng độc lập */
+    display: block;
+}
+
+ul.products li:hover .product-top .product-thumb img {
+    /* hiệu ứng hình ảnh */
+    filter: opacity(80%);
+}
+
+/* bỏ khoảng cách giữa mua ngay và hình ảnh */
+ul.products li .product-top .product-thumb img {
+    display: block;
+}
+
+ul.products li .product-top a.view {
+    /* viết hoa */
+    text-transform: uppercase;
+    /* bỏ gạch chân */
+    text-decoration: none;
+    /* cho vào giữa */
+    text-align: center;
+    display: block;
+    background-color: rgb(246, 224, 94);
+    color: #fff;
+    padding: 10px 0px;
+    position: absolute;
+    bottom: -46px;
+    /* cho nó bằng khối cha gần nhất với nó là 100% là 
+            cái product top */
+    width: 100%;
+    /* làm chậm hiệu ứng mua ngay */
+    transition: 0.25s ease-in-out;
+    /* làm trong background */
+    opacity: 0.85;
+}
+
+ul.products li:hover a.view {
+    bottom: 0px;
+}
+
+ul.products li .product-info {
+    padding: 10px 0px;
+}
+
+ul.products li .product-info a {
+    display: block;
+    text-decoration: none;
+}
+
+ul.products li .product-info a.product-cat {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #9e9e9e;
+    padding: 3px 0px;
+}
+
+ul.products li .product-info a.product-name {
+    color: #334862;
+    padding: 3px 0px;
+}
+
+ul.products li .product-info .product-price {
+    color: #111;
+    padding: 2px 0px;
+
+    font-weight: 600;
+}
