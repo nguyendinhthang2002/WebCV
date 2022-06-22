@@ -1,5 +1,5 @@
 // check validation Account
-function CheckOnblurAccount(){
+function CheckAccount(){
     var Node=document.getElementById('myForm');
     var account=document.getElementById('account').value;
     var errorAcount=document.getElementById('errorAccount');
@@ -25,7 +25,7 @@ function CheckOnblurAccount(){
 }
 
 // check validation PassWord
-function CheckOnblurPass(){
+function CheckPass(){
     var Node=document.getElementById('myForm');
     var password=document.getElementById('password').value;
     var errorPassword=document.getElementById('errorPassword');
@@ -56,7 +56,7 @@ function CheckOnblurConfirmPass(){
     var errorPassword=document.getElementById('errorPassword1');
     var password=document.getElementById('password').value;
     var confirmpassword=document.getElementById('confirmpassword').value;
-    // console.log(Node)
+    console.log(Node)
     // console.log(errorPassword)
     console.log(password)
     console.log(confirmpassword)
