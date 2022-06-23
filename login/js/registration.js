@@ -1,10 +1,13 @@
+
 // check validation Account
 function CheckAccount(){
     var Node=document.getElementById('myForm');
     var account=document.getElementById('account').value;
     var errorAcount=document.getElementById('errorAccount');
-    // biểu thức chính quy ktra tài khoản   (a-z), số (0-9), dấu gạch dưới hoặc dấu gạch nối. 
+    // biểu thức chính quy ktra tài khoản   (a-z), số (0-9), dấu gạch dưới hoặc dấu gạch nối, phai co duoi @gmail.com
+     
     var regex = /^[a-z0-9_-]{3,16}$/;
+    var regex =  /^([a-z0-9_\.-]+)@gmail\.com$/;
 
     if(account==''){
         errorAcount.innerHTML='bạn chưa nhập tài khoản!';
@@ -12,7 +15,7 @@ function CheckAccount(){
         Node.classList.add('invalidAccount');
         Node.classList.remove('validAccount');
     }else if(!regex.test(account)){
-        errorAcount.innerHTML='Tên Tk phải bắt đầu bằng (a-z) hoặc số (0-9)!';
+        errorAcount.innerHTML='Tên Tk phải bắt đầu bằng (a-z) hoặc số (0-9)! và kết thúc bằng @gmail.com';
         errorAcount.style.color='red';
         Node.classList.add('invalidAccount');
         Node.classList.remove('validAccount');
@@ -31,6 +34,7 @@ function CheckPass(){
     var errorPassword=document.getElementById('errorPassword');
 
     // biểu thức chính quy cho pass yc tối thiếu tám ký tự.it nhất chữ cái  hoặc số 
+    
     var regex =/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
     if(password==''){

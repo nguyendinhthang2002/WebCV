@@ -5,6 +5,7 @@ function CheckAccount(){
     var errorAcount=document.getElementById('errorAccount');
     // biểu thức chính quy ktra tài khoản   (a-z), số (0-9), dấu gạch dưới hoặc dấu gạch nối. 
     var regex = /^[a-z0-9_-]{3,16}$/;
+    var regex =  /^([a-z0-9_\.-]+)@gmail\.com$/;
 
     if(account==''){
         errorAcount.innerHTML='bạn chưa nhập tài khoản!';
@@ -12,7 +13,7 @@ function CheckAccount(){
         Node.classList.add('invalidAccount');
         Node.classList.remove('validAccount');
     }else if(!regex.test(account)){
-        errorAcount.innerHTML='Tên Tk phải bắt đầu bằng (a-z) hoặc số (0-9)!';
+        errorAcount.innerHTML='Tên Tk phải bắt đầu bằng (a-z) hoặc số (0-9)! và kết thúc bằng @gmail.com';
         errorAcount.style.color='red';
         Node.classList.add('invalidAccount');
         Node.classList.remove('validAccount');
@@ -57,13 +58,13 @@ document.getElementById("logout").style.display = 'none';
 
 
 function CheckAP(){
-    var adminAccount='admin123';
+    var adminAccount='admin123@gmail.com';
     var adminPass='admin123';
 
-    var clientAcc = 'client1234';
+    var clientAcc = 'client1234@gmail.com';
     var clientPass = 'client1234';
 
-    var clientacc = 'client12345';
+    var clientacc = 'client12345@gmail.com';
     var clientpass = 'client12345'; 
     
     var input=document.getElementsByTagName('input');
