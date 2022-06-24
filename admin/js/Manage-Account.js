@@ -43,9 +43,9 @@ function resetInput(){
     let listClient = localStorage.getItem("list-client") ? JSON.parse(localStorage.getItem("list-client")) : []
     let client = `<tr>
                         <th>ID</th>
-                        <th>Account</th>
-                        <th>Password</th>
-                        <th>Action</th>
+                        <th>Tài khoản</th>
+                        <th>Mật khẩu</th>
+                        <th>Hành động</th>
                     </tr>`
     listClient.map((value, index)=>{
         client += `<tr>

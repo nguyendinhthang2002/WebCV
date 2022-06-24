@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Admin</title>
+  <title>ADMIN</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
 
 </head>
 
-<body onload="time(),renderClient()" class="app sidebar-mini rtl">
+<body onload="time(),renderMember()" class="app sidebar-mini rtl">
   <!-- Navbar-->
   <header class="app-header">
 
@@ -44,24 +44,24 @@
     <hr>
     <ul class="app-menu">
       <li>
-        <a class="app-menu__item text-decoration-none" href="/admin/admin.html">
+        <a class="app-menu__item text-decoration-none" href="/admin/Admin.html">
           <i class='app-menu__icon bi bi-person'></i>
           <span class="app-menu__label">Hồ sơ</span>
         </a>
       </li>
       <li>
-        <a class="app-menu__item text-decoration-none" href="/admin/QLMember.html">
+        <a class="app-menu__item text-decoration-none" href="/admin/Manage-Member.html">
           <i class='app-menu__icon bi bi-people-fill'></i>
           <span class="app-menu__label">Quản lý thành viên</span>
         </a>
       </li>
       <li>
-        <a class="app-menu__item text-decoration-none" href="/admin/QLAccout.html">
+        <a class="app-menu__item text-decoration-none" href="/admin/Manage-Account.html">
           <i class='app-menu__icon bi bi-card-list'></i>
           <span class="app-menu__label">Tài khoản</span>
         </a>
       </li>
-      <li>
+      <!-- <li>
         <a class="app-menu__item text-decoration-none" href="#">
           <i class='app-menu__icon bi bi-list-check'></i>
           <span class="app-menu__label">Quản lý công việc</span>
@@ -72,7 +72,7 @@
           <i class='app-menu__icon bi bi-gear'></i>
           <span class="app-menu__label">Cài đặt</span>
         </a>
-      </li>
+      </li> -->
     </ul>
   </aside>
   <main class="app-content">
@@ -90,23 +90,39 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="">
       <div class="form mb-3">
-        <div class="form-group">
-          <label for="name">Tài khoản: </label>
-          <input type="text" name="" id="account" class="form-input" placeholder="Nhập tài khoản để cấp tài khoản">
-          <div class="error-message"></div>
-        </div>
-        <div class="form-group">
-          <label for="address">Mật khẩu: </label>
-          <input type="text" name="" id="password" class="form-input" placeholder="Nhập mật khẩu để cấp mật khẩu">
-          <div class="error-message"></div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Họ tên: </label>
+              <input type="text" name="" id="name" class="form-input" placeholder="Nhập họ tên">
+              <div class="error-message text-danger"></div>
+            </div>
+            <div class="form-group">
+              <label for="address">Địa chỉ: </label>
+              <input type="text" name="" id="address" class="form-input" placeholder="Nhập địa chỉ">
+              <div class="error-message text-danger"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Phương thức liên hệ: </label>
+              <input type="text" name="" id="contact" class="form-input" placeholder="Nhập email hoặc số điện thoại">
+              <div class="error-message text-danger"></div>
+            </div>
+            <div class="form-group">
+              <label for="address">Chức vụ: </label>
+              <input type="text" name="" id="position" class="form-input" placeholder="Quản lí hoặc nhân viên">
+              <div class="error-message text-danger"></div>
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <input type="hidden" name="" id="index">
         </div>
-        <button id="save" onclick="addNew()">Add new</button>
-        <button id="update" onclick="changeClient()" style="display: none">Update</button>
+        <button id="save" onclick="addNew()" class="btn btn-success">Thêm mới</button>
+        <button id="update" onclick="changeMember()" class="btn btn-success" style="display: none">Cập nhật</button>
       
       </div>
     <table boder="1" class="table ms-3" id="tableContent"></table>
@@ -121,22 +137,22 @@
         </b></p>
     </div>
   </main>
-  <script src="/admin/js/QLAccount.js"></script>
+  <script src="/admin/js/Manage-Member.js"></script>
 
   <script src="js/jquery-3.2.1.min.js"></script>
-  
-  <script src="js/popper.min.js"></script>
 
+  <script src="js/popper.min.js"></script>
+  
   <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
-  
+
   <script src="js/bootstrap.min.js"></script>
-  
+
   <script src="js/main.js"></script>
-  
+
   <script src="js/plugins/pace.min.js"></script>
-  
+
   <script type="text/javascript" src="js/plugins/chart.js"></script>
-  
+
   <script type="text/javascript">
     var data = {
       labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],

@@ -71,7 +71,7 @@ function renderMember(){
                       <th>Địa chỉ</th>
                       <th>Liên hệ</th>
                       <th>Chức vụ</th>
-                      <th>Action</th>
+                      <th>Hành động</th>
                   </tr>`
   listMember.map((value, index)=>{
       member += `<tr>
