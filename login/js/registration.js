@@ -1,7 +1,7 @@
 
 // check validation Account
 function CheckAccount(){
-    var Node=document.getElementById('myForm');
+    // var Node=document.getElementById('myForm');
     var account=document.getElementById('account').value;
     var errorAcount=document.getElementById('errorAccount');
     // biểu thức chính quy ktra tài khoản   (a-z), số (0-9), dấu gạch dưới hoặc dấu gạch nối, phai co duoi @gmail.com
@@ -12,24 +12,17 @@ function CheckAccount(){
     if(account==''){
         errorAcount.innerHTML='bạn chưa nhập tài khoản!';
         errorAcount.style.color='red';
-        Node.classList.add('invalidAccount');
-        Node.classList.remove('validAccount');
     }else if(!regex.test(account)){
         errorAcount.innerHTML='Tên Tk phải bắt đầu bằng (a-z) hoặc số (0-9)! và kết thúc bằng @gmail.com';
         errorAcount.style.color='red';
-        Node.classList.add('invalidAccount');
-        Node.classList.remove('validAccount');
     }else{
         errorAcount.innerHTML='';
-        Node.classList.remove('invalidAccount');
-        Node.classList.add('validAccount');
-
     }
 }
 
 // check validation PassWord
 function CheckPass(){
-    var Node=document.getElementById('myForm');
+    // var Node=document.getElementById('myForm');
     var password=document.getElementById('password').value;
     var errorPassword=document.getElementById('errorPassword');
 
@@ -40,23 +33,17 @@ function CheckPass(){
     if(password==''){
         errorPassword.innerHTML='Bạn chưa nhập mật khẩu!';
         errorPassword.style.color='red';
-        Node.classList.add('invalidPass');
-        Node.classList.remove('validPass');
     }else if(!regex.test(password)){
         errorPassword.innerHTML='Mật khẩu tối thiểu phải có 8 ký tự, ít nhất 1 chữ cái,1 số!';
         errorPassword.style.color='red';
-        Node.classList.add('invalidPass');
-        Node.classList.remove('validPass');
     }else{
         errorPassword.innerHTML='';
-        Node.classList.remove('invalidPass');
-        Node.classList.add('validPass');
     }
 }
 
 
 function CheckOnblurConfirmPass(){
-    var Node=document.getElementById('myForm');
+    // var Node=document.getElementById('myForm');
     var errorPassword=document.getElementById('errorPassword1');
     var password=document.getElementById('password').value;
     var confirmpassword=document.getElementById('confirmpassword').value;
@@ -67,17 +54,11 @@ function CheckOnblurConfirmPass(){
 
     if(confirmpassword==''||confirmpassword==null){
         errorPassword.style.color='red';
-        Node.classList.add('invalidConfirmPass');
-        Node.classList.remove('validConfirmPass');
     }else if(confirmpassword!=password){
         errorPassword.innerHTML='Mật khẩu không khớp!';
-        errorPassword.classList.add("invalidConfirmPass");
-        Node.classList.remove('validConfirmPass');
         errorPassword.style.color='red';
     }else{
         errorPassword.innerHTML='';
-        errorPassword.classList.remove("invalidConfirmPass");
-        Node.classList.add('validConfirmPass');
     }
 }
 

@@ -5,6 +5,11 @@ function resetInput(){
   document.getElementById("position").value = ""
 }
 
+function emailIsValid(email){
+  let pattern = /\S+@\S+\.\S+/;
+  return pattern.test(email);
+}
+
 function validateInput(){
   let formElement = document.querySelector(".form")
   let inputElement = formElement.querySelectorAll(".form-input")
@@ -17,8 +22,8 @@ function validateInput(){
         inputElement[1].parentElement.querySelector(".error-message").innerText = `Vui lòng nhập địa chỉ!`
       }else{
         inputElement[1].parentElement.querySelector(".error-message").innerText = ''
-      }if(inputElement[2].value===""){
-        inputElement[2].parentElement.querySelector(".error-message").innerText = `Vui lòng nhập phương thức liên hệ!`
+      }if(inputElement[2].value==="" || !emailIsValid(inputElement[2].value)){
+        inputElement[2].parentElement.querySelector(".error-message").innerText = `Vui lòng nhập đúng phương thức liên hệ!`
       }else{
         inputElement[2].parentElement.querySelector(".error-message").innerText = ''
       }if(inputElement[3].value===""){
